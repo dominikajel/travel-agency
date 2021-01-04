@@ -15,6 +15,8 @@ import parseTrips from './utils/parseTrips';
 import { setMultipleStates } from './redux/globalRedux';
 import Countries from './components/views/Countries/CountriesContainer';
 import Regions from './components/views/Regions/RegionsContainer';
+import Trip from './components/views/Trip/TripContainer';
+
 
 class App extends React.Component {
   static propTypes = {
@@ -47,6 +49,7 @@ class App extends React.Component {
             <Route exact path="/countries" component={Countries} />
             <Route exact path="/regions" component={Regions} />
             <Route path="*" component={NotFound} />
+            <Route exact path="/trip/:id" component={Trip} />
           </Switch>
         </MainLayout>
       </BrowserRouter>
